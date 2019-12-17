@@ -25,7 +25,7 @@ public class CardManager {
     public void loadCards() {
         File databaseFolder = new File(System.getProperty("user.dir") + "/cards");
         if (!databaseFolder.exists()) databaseFolder.mkdirs();
-        File databaseFile = new File(databaseFolder, "output.php.json");
+        File databaseFile = new File(databaseFolder, "cardsfile.json");
         if (!databaseFile.exists()) {
             System.out.println("Database file does not exist");
             Main.jda.shutdown();
