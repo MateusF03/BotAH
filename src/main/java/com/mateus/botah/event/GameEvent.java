@@ -29,7 +29,7 @@ public class GameEvent implements EventListener {
                 } else {
                     List<User> players = new ArrayList<>();
                     players.add(e.getAuthor());
-                    e.getMessage().getMentionedMembers().forEach(m -> players.add(m.getUser()));
+                    players.addAll(players);
                     CardManager.get().startGame(players, e.getTextChannel());
                 }
             }
