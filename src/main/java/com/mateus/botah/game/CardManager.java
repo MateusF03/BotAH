@@ -66,7 +66,6 @@ public class CardManager {
         JSONArray whi = (JSONArray) jsonObject.get("whiteCards");
         for (int i=0; i<bla.size(); i++) {
             JSONObject card = (JSONObject) bla.get(i);
-            if ((Long) card.get("pick") == 3) continue;
             Card c = new Card(CardType.BLACK);
             c.setContent((String) card.get("text"));
             c.setPick(Math.toIntExact((Long) card.get("pick")));
